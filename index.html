@@ -10,8 +10,12 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
 .navbar {
     background-color: rgb(155, 233, 155);
     width: 100%;
@@ -28,7 +32,7 @@ body, html {
 
 .logo-img {
     position:absolute;
-    top:3px;right:30px;
+    top:3px;right:40px;
  /* Adjust as needed */
 }
 .logo-img img{
@@ -39,13 +43,14 @@ body, html {
 .nav-links {
     list-style-type: none;
     margin: 0;
+    margin-left: 20px;
     padding: 0;
     order: 1; /* Places the nav-links at the start */
 }
 
 .nav-links li {
     float: left;
-    margin-left: 20px; /* Adjust spacing between items */
+    margin-left: 30px; /* Adjust spacing between items */
 }
 
 .nav-links li a {
@@ -60,6 +65,33 @@ body, html {
     border-radius: 5px; /* Optional: Rounded corners on hover */
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section h1, .section h2 {
+    color: #333;
+}
+
+.section p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
 </style>
 <body>
 
@@ -75,9 +107,51 @@ body, html {
     <img src="logo.png" alt="Logo">
 </div>
 
-<div class="content">
-    <!-- Your main content here -->
-</div>
+<!-- Home Section -->
+<section id="home" class="section">
+    <div class="content">
+        <h1>Welcome to PAWAN KNITWEAR</h1>
+        <p>Manufacturer of knitted and crocheted woolen fabrics.</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="content">
+        <h2>About Us</h2>
+        <p>We started our journey on 24th March 2021, located in Ludhiana, Punjab, India. PAWAN KNITWEAR specializes in producing high-quality knitted and crocheted woolen fabrics.</p>
+    </div>
+</section>
+
+<!-- Products/Services Section -->
+<section id="products" class="section">
+    <div class="content">
+        <h2>Our Products/Services</h2>
+        <p>Explore our range of knitted and crocheted woolen fabrics designed to meet your needs.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <address>
+            PAWAN KNITWEAR<br>
+            New Kailash Nagar Road, ST No. 2, Block A,<br>
+            Ludhiana, Punjab, India - 141007<br>
+            Phone: +91 1234567890<br>
+            Email: asc@test.com
+        </address>
+    </div>
+</section>
+
+<!-- Footer -->
+ 
+<footer class="footer">
+    <div class="content">
+        <p>&copy; 2024 PAWAN KNITWEAR. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
