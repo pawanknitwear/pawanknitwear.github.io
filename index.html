@@ -137,6 +137,157 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #555;
 }
+
+/* Product Grid styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item p {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* About Section styles */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.about-description {
+    text-align: left;
+}
+
+.about-description h2 {
+    color: #333;
+}
+
+.about-description p {
+    color: #666;
+}
+
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.slideshow img:first-child {
+        display: block;
+    }
+
+.testimonials {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonials blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.timeline {
+    margin-top: 40px;
+}
+
+.event {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.event .date {
+    flex: 0 0 auto;
+    width: 80px;
+    font-weight: bold;
+}
+
+.event .event-details {
+    flex: 1 1 auto;
+    padding-left: 20px;
+}
+
+.event-details h4 {
+    color: #333;
+    margin-top: 0;
+}
+
+.event-details p {
+    color: #666;
+}
+
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.member {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member h4 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.member p {
+    color: #666;
+}
+
 </style>
 <body>
 
@@ -156,15 +307,72 @@ button[type="submit"]:hover {
 <section id="home" class="section">
     <div class="content">
         <h1>Welcome to PAWAN KNITWEAR</h1>
-        <p>Manufacturer of knitted and crocheted woolen fabrics.</p>
+        <p>Manufacturer of knitted and crocheted woolen fabrics.</p>       
+    </div>
+    <br>
+    <div class="slideshow">
+        <img src="slide1.jpg" alt="Slide 1">
+        <img src="slide2.jpg" alt="Slide 2">
+        <img src="slide3.jpg" alt="Slide 3">
+    </div> 
+    <div class="testimonials">
+        <blockquote>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            <cite>John Doe, CEO at XYZ Company</cite>
+        </blockquote>
+        <!-- Add more testimonials as needed -->
     </div>
 </section>
+
 
 <!-- About Section -->
 <section id="about" class="section">
     <div class="content">
         <h2>About Us</h2>
         <p>We started our journey on 24th March 2021, located in Ludhiana, Punjab, India. PAWAN KNITWEAR specializes in producing high-quality knitted and crocheted woolen fabrics.</p>
+        <br><br><br><br>
+        <div class="about-grid">
+            <!-- Image of Machine -->
+            <div class="about-image">
+                <img src="pro10.jpeg" alt="Machine Used">
+            </div>
+            <!-- Description of Machine -->
+            <div class="about-description">
+                <h2>Our Machinery</h2>
+                <p>We use advanced knitting machines to produce high-quality knitted and crocheted woolen fabrics. These machines are equipped with state-of-the-art technology to ensure precision and efficiency in our manufacturing process.</p>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="event">
+                <div class="event-details">
+                    <h4>2021 - Company Established</h4>
+                    <p>PAWAN KNITWEAR was founded in March 2021 in Ludhiana, Punjab, India.</p>
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-details">
+                    <h4>2022 - Expansion of Production Facilities</h4>
+                    <p>We expanded our production capabilities with new machinery and technology.</p>
+                </div>
+            </div>
+            <!-- Add more events as needed -->
+        </div>
+        
+        <div class="team-members">
+            <div class="member">
+                <img src="founder1.png" alt="Founder 1">
+                <h4>John Doe</h4>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="member">
+                <img src="founder2.png" alt="Founder 2">
+                <h4>Jane Smith</h4>
+                <p>Co-founder & COO</p>
+            </div>
+            <!-- Add more members as needed -->
+        </div>
+        
     </div>
 </section>
 
@@ -173,6 +381,44 @@ button[type="submit"]:hover {
     <div class="content">
         <h2>Our Products/Services</h2>
         <p>Explore our range of knitted and crocheted woolen fabrics designed to meet your needs.</p>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-item">
+                <img src="pro1.jpeg" alt="Product 1">
+                <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-item">
+                <img src="pro2.jpeg" alt="Product 2">
+                <p>Description of Product 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-item">
+                <img src="pro3.jpeg" alt="Product 3">
+                <p>Description of Product 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-item">
+                <img src="pro4.jpeg" alt="Product 4">
+                <p>Description of Product 4. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-item">
+                <img src="pro5.jpeg" alt="Product 5">
+                <p>Description of Product 5. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-item">
+                <img src="pro6.jpeg" alt="Product 6">
+                <p>Description of Product 6. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+            </div>
+            
+        </div>
     </div>
 </section>
 
@@ -202,10 +448,10 @@ button[type="submit"]:hover {
 
         <address>
             PAWAN KNITWEAR<br>
-            New Kailash Nagar Road, ST No. 2, Block A,<br>
+            New Kailash Nagar Road, ST No. 2, Block A,
             Ludhiana, Punjab, India - 141007<br>
-            Phone: +91 1234567890<br>
-            Email: asc@test.com
+            Phone: +91 9041741725<br>
+            Email: pd356000@gmail.com
         </address>
     </div>
 </section>
@@ -219,4 +465,24 @@ button[type="submit"]:hover {
 </footer>
 
 </body>
+<script>
+// JavaScript for slideshow effect
+    const slides = document.querySelectorAll('.slideshow img');
+    let currentSlide = 0;
+
+    function showSlide(slideIndex) {
+        slides.forEach((slide) => (slide.style.display = 'none'));
+        slides[slideIndex].style.display = 'block';
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Automatically advance to the next slide every 3 seconds
+    setInterval(nextSlide, 3000);
+
+
+</script>
 </html>
