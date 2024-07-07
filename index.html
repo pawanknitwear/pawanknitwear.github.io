@@ -13,20 +13,27 @@ body, html {
 }
 
 .navbar {
-    background-color: green;
+    background-color: rgb(155, 233, 155);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .logo {
     order: 2; /* Pushes the logo to the end */
 }
 
-.logo img {
-    max-height: 40px; /* Adjust as needed */
+.logo-img {
+    position:absolute;
+    top:3px;right:30px;
+ /* Adjust as needed */
+}
+.logo-img img{
+    height: 80px;
+    width:auto;
 }
 
 .nav-links {
@@ -43,7 +50,7 @@ body, html {
 
 .nav-links li a {
     text-decoration: none;
-    color: white;
+    color:#004AAD;
     font-weight: bold;
     padding: 10px 15px;
 }
@@ -57,9 +64,6 @@ body, html {
 <body>
 
 <nav class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
-    </div>
     <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -67,6 +71,9 @@ body, html {
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
+<div class="logo-img">
+    <img src="logo.png" alt="Logo">
+</div>
 
 <div class="content">
     <!-- Your main content here -->
